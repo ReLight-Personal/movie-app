@@ -19,7 +19,17 @@ export default class About extends Component {
         </a>
       </p>
       <p><a href="${github}" target="_blank">Github</a></p>
-      <p><a href="${blog}" target="_blank">Blog</a></p>
+      ${
+        blog === "#/notFound"
+          ? `<p>
+            <a href="${blog}">Blog</a>
+          </p>`
+          : `<p>
+            <a href="${blog}" target="_blank">
+              Blog
+            </a>
+          </p>`
+      }
     `;
   }
 }
